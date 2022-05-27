@@ -8,6 +8,7 @@ import { geocode} from './utils/geocode.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
+const port = process.env.PORT || 3000;
 
 const app = express();
 
@@ -89,6 +90,6 @@ app.get('*',(req,res)=>{
     });
 })
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log("server is up");
 })
